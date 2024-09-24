@@ -20,13 +20,14 @@ import Stack from "@mui/material/Stack";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Login from "./view/Login/index.tsx";
 import "./index.css";
+const drawerWidth = 240
 
 const router = createBrowserRouter([
   {
     path: "/login",
     element: (
       <Wrapper>
-        <Stack width="100vh">
+        <Stack width={`calc(95vw - ${drawerWidth}px)`}>,
           <Login />
         </Stack>
       </Wrapper>
