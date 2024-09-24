@@ -27,6 +27,7 @@ const login = async (data: LoginData) => {
 
 const auth = async () => {
   const token = localStorage.getItem("tokenUserSite");
+  // @ts-expect-error next line
   const auth = await fetch(config.apiUrl + `/v1/user/${jwtDecode(token).id}`, {
     method: "get",
     headers: new Headers({

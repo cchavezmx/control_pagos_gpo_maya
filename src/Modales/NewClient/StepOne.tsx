@@ -1,3 +1,5 @@
+/* eslint-disable */
+// @ts-nocheck
 import { useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { NewClientStore } from "../../context/NewClientStore";

@@ -51,7 +51,7 @@ const SignInContainer = styled(Stack)(({ theme }) => ({
   },
 }));
 
-export default function SignIn(props: { disableCustomTheme?: boolean }) {
+export default function SignIn() {
   const [errorLogin, setErrorLogin] = useState(false);
   const [loading, setLoading] = useState(false);
 
