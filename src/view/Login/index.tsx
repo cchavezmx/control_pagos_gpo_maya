@@ -98,7 +98,9 @@ export default function SignIn() {
           >
             <FormControl>
               <Stack gap={1}>
-                <FormLabel htmlFor="email">Email</FormLabel>
+                <FormLabel htmlFor="email">
+                  <small>Email</small>
+                </FormLabel>
                 <TextField
                   error={errorLogin}
                   helperText={errorLogin ? "Invalid email or password." : ""}
@@ -115,6 +117,9 @@ export default function SignIn() {
                   sx={{ ariaLabel: "email" }}
                   disabled={loading}
                 />
+                <FormLabel htmlFor="password">
+                  <small>Contraseña</small>
+                </FormLabel>
                 <TextField
                   error={errorLogin}
                   helperText={errorLogin ? "Invalid email or password." : ""}

@@ -20,6 +20,7 @@ import NewProject from "../../Modales/NewProject/NewProject";
 import NewReleasesIcon from "@mui/icons-material/NewReleases";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../../services/mutations";
+import { Link } from "react-router-dom";
 
 function MenuIndex() {
   const [openSettingsModal, setOpenSettingsModal] = useState(false);
@@ -86,9 +87,11 @@ function MenuIndex() {
             <ListItemIcon>
               <AssessmentIcon />
             </ListItemIcon>
-            <ListItemText primary="Reporte de cliente" />
-          </ListItemButton>
-        </ListItem>
+              <Link to="/pagos-record">
+                <ListItemText primary="Reporte de cliente" />
+              </Link>
+            </ListItemButton>
+          </ListItem>
       </List>
       <Divider />
       <List

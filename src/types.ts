@@ -131,6 +131,58 @@ interface IClientSearch {
 interface ICreateNewLote extends ILotesRow, Omit< "_id", | "id" > {  
 }
 
+interface PagosExtra {
+  _id: string;
+  id_pago_: string;
+  tipo: string;
+  extraSlug: string;
+  mensualidad: number;
+}
+
+interface ClienteData {
+  _id: string;
+  nombre: string;
+  email: string;
+  phone: string;
+  address: string;
+}
+
+interface ProyectoData {
+  _id: string;
+  title: string;
+  isActive: boolean;
+  updatedAt: string;
+}
+
+interface LoteData {
+  _id: string;
+  lote: string;
+  manzana: string;
+  precioTotal: number;
+  enganche: number;
+  financiamiento: number;
+  plazo: number;
+  mensualidad: number;
+  inicioContrato: string;
+  isActive: boolean;
+}
+
+interface PagosRecordsDataRow {
+  id: string; // Lote ID
+  cliente: string; // Cliente ID
+  totalMensualidad: number;
+  pagosExtra: PagosExtra[]; // Array de pagos extra
+  pagosMoratorios: number;
+  numeroDePagos: number;
+  cliente_data: ClienteData; // Datos del cliente
+  proyecto_data: ProyectoData; // Datos del proyecto
+  lote_data: LoteData; // Datos del lote
+  isPaid: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+
 export type {
   DataItem,
   DashboardDataComponent,
@@ -146,5 +198,7 @@ export type {
   IStore,
   IClientSearch,
   INewClientPost,
-  ICreateNewLote
+  ICreateNewLote,
+  PagosExtra,
+  PagosRecordsDataRow,
 };

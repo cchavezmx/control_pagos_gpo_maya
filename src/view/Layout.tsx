@@ -15,6 +15,7 @@ import ClientIndex from "../components/Menu/ClientIndex";
 import ProjectIndex from "../components/Menu/ProjectIndex";
 import PaymentsIndex from "../components/Menu/PaymentsIndex";
 import MorososIndex from "../components/Menu/MorososIndex"
+import ReporteClienteIndex from "../components/Menu/ReporteClienteIndex";
 
 export const drawerWidth = 240;
 
@@ -55,6 +56,7 @@ export default function Layout(props: Props) {
     "proyecto": "project",
     "pagos": "payments",
     "morosos": "morosos",
+    "pagos-record": "reportes",
   };
 
   const drawerMenus: { [key: string]: React.ReactElement } = {
@@ -63,6 +65,7 @@ export default function Layout(props: Props) {
     project: <ProjectIndex />,
     payments: <PaymentsIndex />,
     morosos: <MorososIndex />,
+    reportes: <ReporteClienteIndex />,
   };
 
   const [, route] = location.pathname.split("/");

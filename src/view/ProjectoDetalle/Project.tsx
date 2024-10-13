@@ -13,6 +13,7 @@ function Project() {
   return (
     <Box
       sx={{
+        marginTop: "80px",
         minHeight: "50vh",
         width: `calc(100vw - ${drawerWidth}px)`,
         padding: "0 2rem",

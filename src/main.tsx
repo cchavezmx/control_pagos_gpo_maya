@@ -20,6 +20,7 @@ import Stack from "@mui/material/Stack";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Login from "./view/Login/index.tsx";
 import "./index.css";
+import PagosRecors from "./view/PagosRecords/index.tsx";
 const drawerWidth = 240
 
 const router = createBrowserRouter([
@@ -73,6 +74,14 @@ const router = createBrowserRouter([
       </Wrapper>
     ),
   },
+  {
+    path: "pagos-record",
+    element: (
+      <Wrapper>
+        <PagosRecors />
+      </Wrapper>
+    ),
+  }
 ]);
 
 const theme = createTheme({
