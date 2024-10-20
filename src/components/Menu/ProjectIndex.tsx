@@ -12,7 +12,7 @@ import {
 import LogoutIcon from "@mui/icons-material/Logout";
 import { Fragment } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import AssessmentIcon from "@mui/icons-material/Assessment";
+//import AssessmentIcon from "@mui/icons-material/Assessment";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../../services/mutations";
 
@@ -51,14 +51,15 @@ function ProjectIndex() {
       <Divider />
       <ListSubheader>Reportes</ListSubheader>
       <List>
-        <ListItem disablePadding>
+        {/*   <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
               <AssessmentIcon />
             </ListItemIcon>
             <ListItemText primary="Reporte de cliente" />
           </ListItemButton>
-        </ListItem>
+       </ListItem>
+            */}
       </List>
       <Divider />
       <List

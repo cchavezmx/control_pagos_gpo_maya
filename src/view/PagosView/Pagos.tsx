@@ -11,8 +11,6 @@ function Pagos() {
     { suspense: true },
   );
 
-  console.log(pagos, "pagos");
-
   return (
     <Box
       sx={{
@@ -21,7 +19,7 @@ function Pagos() {
         display: "flex",
         flexDirection: "column",
         padding: "0 2rem",
-        marginTop: "60px",
+        marginTop: "80px",
       }}
     >
       <Stack marginBottom={3} gap={1}>
