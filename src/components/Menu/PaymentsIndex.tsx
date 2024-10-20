@@ -51,14 +51,16 @@ function PaymentsIndex() {
       <Divider />
       <ListSubheader>Reportes</ListSubheader>
       <List>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
+        {/*
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
               <AssessmentIcon />
-            </ListItemIcon>
-            <ListItemText primary="Reporte de cliente" />
-          </ListItemButton>
+              </ListItemIcon>
+              <ListItemText primary="Reporte de cliente" />
+            </ListItemButton>
         </ListItem>
+        */}
       </List>
       <Divider />
       <List
