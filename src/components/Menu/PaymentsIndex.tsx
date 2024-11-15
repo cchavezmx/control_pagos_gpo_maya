@@ -12,7 +12,6 @@ import {
 import LogoutIcon from "@mui/icons-material/Logout";
 import { Fragment } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import AssessmentIcon from "@mui/icons-material/Assessment";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../../services/mutations";
 
