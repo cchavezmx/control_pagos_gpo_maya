@@ -5,6 +5,7 @@ import { DataGrid, GridToolbar, GridCellProps } from "@mui/x-data-grid";
 import { Box, Button, Chip } from "@mui/material";
 import { esES } from "@mui/x-data-grid/locales";
 import { currencyValueGetter, dayformatValueGutter } from "../../utils/helpers";
+import { Link } from "react-router-dom";
 
 export default function PagosRecordsView(props: {
   data: PagosRecordsDataRow[];
@@ -34,6 +35,21 @@ export default function PagosRecordsView(props: {
     },
     { field: "numeroDePagos", headerName: "Número de Pagos", width: 150 },
     { field: "pagosTotales", header: "Pagos Totales", width: 150 },
+    {
+      field: "detalle",
+      headerName: "Detalle de Pagos",
+      width: 200,
+      renderCell: (row: GridCellProps) => {
+        return (
+          <Link
+            to={`/payments-details/${row.id}/${row.row.cliente}`}
+            style={{ textDecoration: "none" }}
+          >
+            <Button variant="outlined">Detalle</Button>
+          </Link>
+        );
+      },
+    },
     { field: "proyecto", headerName: "Proyecto", width: 200 },
     { field: "lote", headerName: "Lote", width: 100 },
     {

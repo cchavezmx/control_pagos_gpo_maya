@@ -5,7 +5,6 @@ import { drawerWidth } from "../Layout";
 
 function PagosRecors() {
   const { data: records } = useSWR(`/v2/pagos-records`, { suspense: true });
-
   return (
     <Box>
       <Stack mt={8}>

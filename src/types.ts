@@ -182,6 +182,25 @@ interface PagosRecordsDataRow {
   updatedAt: string;
 }
 
+interface PaymentsDetails {
+  isActive: boolean;
+  status: boolean;
+  cliente: string[];
+  proyecto: string[];
+  lote: {
+    lote: string;
+    manzana: string;
+  };
+  _id: string;
+  mes: string;
+  refPago: string;
+  mensualidad: number;
+  tipoPago: string;
+  folio: number;
+  createdAt: string;
+  updatedAt: string;
+  banco: string;
+}
 
 export type {
   DataItem,
@@ -201,4 +220,5 @@ export type {
   ICreateNewLote,
   PagosExtra,
   PagosRecordsDataRow,
+  PaymentsDetails,
 };

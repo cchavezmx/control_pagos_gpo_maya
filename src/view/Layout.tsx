@@ -16,6 +16,7 @@ import ProjectIndex from "../components/Menu/ProjectIndex";
 import PaymentsIndex from "../components/Menu/PaymentsIndex";
 import MorososIndex from "../components/Menu/MorososIndex"
 import ReporteClienteIndex from "../components/Menu/ReporteClienteIndex";
+import PayDetailsIndex from "../components/Menu/PayDetailsIndex";
 
 export const drawerWidth = 240;
 
@@ -57,6 +58,7 @@ export default function Layout(props: Props) {
     "pagos": "payments",
     "morosos": "morosos",
     "pagos-record": "reportes",
+    "payments-details": "paydetails",
   };
 
   const drawerMenus: { [key: string]: React.ReactElement } = {
@@ -66,6 +68,7 @@ export default function Layout(props: Props) {
     payments: <PaymentsIndex />,
     morosos: <MorososIndex />,
     reportes: <ReporteClienteIndex />,
+    paydetails: <PayDetailsIndex />,
   };
 
   const [, route] = location.pathname.split("/");

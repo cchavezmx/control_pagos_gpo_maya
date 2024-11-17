@@ -83,7 +83,7 @@ export default function SignIn() {
             variant="h2"
             sx={{ width: "100%", fontSize: "clamp(2rem, 10vw, 2.15rem)" }}
           >
-            Bienvenido
+            Bienvenido Grupo Maya
           </Typography>
           <Box
             component="form"

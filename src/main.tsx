@@ -21,17 +21,15 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Login from "./view/Login/index.tsx";
 import "./index.css";
 import PagosRecors from "./view/PagosRecords/index.tsx";
-const drawerWidth = 240
+import PaymentsDetails from "./view/PaymenstDetails";
 
 const router = createBrowserRouter([
   {
     path: "/login",
     element: (
-      <Wrapper>
-        <Stack width={`calc(95vw - ${drawerWidth}px)`}>,
+        <Stack width="100vw">,
           <Login />
         </Stack>
-      </Wrapper>
     ),
   },
   {
@@ -79,6 +77,14 @@ const router = createBrowserRouter([
     element: (
       <Wrapper>
         <PagosRecors />
+      </Wrapper>
+    ),
+  },
+  {
+    path: "payments-details/:id/:title",
+    element: (
+      <Wrapper>
+        <PaymentsDetails />
       </Wrapper>
     ),
   }

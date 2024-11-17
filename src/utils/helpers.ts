@@ -10,17 +10,17 @@ const createTitle = (titleHeader: string, prefix: string) => {
 };
 
 const currencyValueGetter = (params: number) => {
-  let value = 0
-  if (typeof params === 'object') {
+  let value = 0;
+  if (typeof params === "object") {
     value = parseFloat(params["$numberDecimal"]);
   } else {
-    value = params
+    value = params;
   }
   return Intl.NumberFormat("es-MX", {
     style: "currency",
     currency: "MXN",
-  }).format((value));
-}
+  }).format(value);
+};
 
 const dayformatValueGutter = (params: string) => {  
   return dayjs(params).format("DD/MM/YY")

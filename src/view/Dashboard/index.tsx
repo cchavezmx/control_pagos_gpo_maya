@@ -15,8 +15,6 @@ function DashboardHOC() {
       })
   }, [])
 
-  console.log(isAuth)
-
   const { data } = useSWR("/v1/proyectos", { suspense: true });
   const { data: settings } = useSWR("/v1/settingsapp/get", { suspense: true })
 
@@ -25,10 +23,9 @@ function DashboardHOC() {
       return settings?.[0].razonSocial;
     }
   }, [settings]);
-
   return (
     <Box sx={{ minHeight: '50vh', width: "fit-content", marginTop: "30px" }}>
-      <Dashboard data={data} razon={razon} />
+      {isAuth && <Dashboard data={data} razon={razon} /> }
     </Box>
   );
 }
